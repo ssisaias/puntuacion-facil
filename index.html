@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡¿¡!?!</title>
+</head>
+
+<body style="margin: 0; background-color: black; border: 6.66rem;">
+  <div
+    style="margin-top: -100px; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 6.66rem; font-family: 'Roboto', sans-serif; font-size: 850%; text-align: center;">
+    <h1 style="color: white;"> ¡ <button data-val="¡">¡Copy!</button></h1>
+    <h1 style="color: white;"> ¿ <button data-val="¿">¿Copy?</button></h1>
+  </div>
+</body>
+
+<script>
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      navigator.clipboard.writeText(button.dataset.val);
+    });
+  });
+</script>
+
+</html>
